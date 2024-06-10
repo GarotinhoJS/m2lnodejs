@@ -6,7 +6,7 @@ const fs = require('fs');
 const path = require('path');
 const nodemailer = require('nodemailer');
 const dotenv = require('dotenv');
-const uuid = require('uuid');// Génère token
+
 
 const port = 3003;
 
@@ -88,7 +88,7 @@ app.post('/register', (req, res) => {
           from: 'maison@ligue.com',
           to: email,
           subject: 'Confirmation d\'email',
-          text: `Cliquez sur le lien suivant pour confirmer votre email : http://localhost:3000/confirmation?token=${confirmationToken}`
+          
         };
 
         transporter.sendMail(mailOptions, function (error, info) {
