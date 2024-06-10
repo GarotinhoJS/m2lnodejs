@@ -61,10 +61,10 @@ app.post('/register', (req, res) => {
 
       
      // Fonction pour générer un token unique
-const confirmationToken = uuid.v4();
 
-      connection.query('INSERT INTO utilisateur (nom, prenom, ddn, email, mdp, role, verified, confirmation_token) VALUES (?, ?, ?, ?, ?, ?, ?, ?)',
-        [nom, prenom, ddn, email, hashedPassword, role, 0, confirmationToken], function (error, results, fields) {
+
+      connection.query('INSERT INTO utilisateur (nom, prenom, ddn, email, mdp, role, verified) VALUES (?, ?, ?, ?, ?, ?, ?)',
+        [nom, prenom, ddn, email, hashedPassword, role, 0], function (error, results, fields) {
 
         if (error) {
           console.error('Erreur de requête SQL lors de l\'enregistrement :', error);
