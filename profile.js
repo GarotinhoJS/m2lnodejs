@@ -12,9 +12,9 @@ app.use(cors());
 
 // Configuration de la base de données
 const db = mysql.createConnection({
-  host: '194.164.63.21',
-  user: 'nedy',
-  password: 'Nedved91$',
+  host: 'localhost',
+  user: 'root',
+  password: '',
   database: 'm2l',
 });
 

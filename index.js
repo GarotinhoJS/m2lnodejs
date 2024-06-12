@@ -12,9 +12,9 @@ const port = 3004;
 
 // Connexion à la base de données
 const connection = mysql.createConnection({
-  host: '194.164.63.21',
-  user: 'nedy',
-  password: 'Nedved91$',
+  host: 'localhost',
+  user: 'root',
+  password: '',
   database: 'm2l',
 });
 
